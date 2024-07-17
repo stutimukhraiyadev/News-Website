@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://kit.fontawesome.com/5fa681bfa6.js" crossorigin="anonymous"></script>
+    <title>Headlines Today</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">Headlines Today</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">National News</a></li>
+                    <li><a href="#">International News</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li id="login-link"><a href="./login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <nav class="category-nav">
+        <ul>
+            <li><a href="/business" data-category="business">business</a></li>
+            <li><a href="/entertainment" data-category="entertainment">entertainment</a></li>
+            <li><a href="/general" data-category="general">general</a></li>
+            <li><a href="/health" data-category="health">health</a></li>
+            <li><a href="/science" data-category="science">science</a></li>
+            <li><a href="/sports" data-category="sports">sports</a></li>
+            <li><a href="/technology" data-category="technology">technology</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <main>
+        <h1 style="text-align: center;">Top News</h1>
+        <div class="news-container" id="news-container">
+            <!-- News articles will be dynamically inserted here -->
+        </div>
+         <div class="load-more-container">
+            <button id="load-more">Load More</button>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Address: Example city road</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-youtube"></i></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NewsSite. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/index.js"></script>
+</body>
+</html>
