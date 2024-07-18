@@ -57,7 +57,8 @@ header {
 }
 
 .main-nav li :hover{
-    background-color: #3d3d3d;
+    background-color: lavender;
+    color: black;
     /* font-weight: bold; */
 
     border-radius: 3px;
