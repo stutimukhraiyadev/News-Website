@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '3f9306af94c3428eaf8b8e210f9a46e5';
+    const apiKey = '46ff10fd349cb0532a16c001f50ddc4f';
     let page = 1;
     const pageSize = 9;
-    let currentCategory = '';
+    let currentTopic = '';
 
     function fetchNews(initialLoad = false) {
-        const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}&page=${page}&pageSize=${pageSize}`;
-        const categoryUrl = currentCategory ? `&category=${currentCategory}` : '';
-        const finalUrl = `${apiUrl}${categoryUrl}`;
+        const apiUrl = `https://gnews.io/api/v4/top-headlines?topic=general&lang=en&country=in&apikey=${apiKey}&page=${page}&pageSize=${pageSize}`;
+        const topicUrl = currentTopic ? `&topic=${currentTopic}` : '';
+        const finalUrl = `${apiUrl}${topicUrl}`;
         console.log('Fetching news from:', finalUrl); // Log the constructed URL
 
         fetch(finalUrl)
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         newsItem.className = 'news-item';
 
                         const newsImage = document.createElement('img');
-                        newsImage.src = article.urlToImage || 'default-image.jpg';
+                        newsImage.src = article.image || 'default-image.jpg';
                         newsItem.appendChild(newsImage);
 
                         const newsContent = document.createElement('div');
@@ -77,17 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
         page++;
     });
 
-    // Add event listeners to category links
-    const categoryLinks = document.querySelectorAll('.category-nav ul li a');
-    categoryLinks.forEach(link => {
+    // Add event listeners to topic links
+    const topicLinks = document.querySelectorAll('.topic-nav ul li a');
+    topicLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
-            // Remove active class from all category links
-            categoryLinks.forEach(link => link.classList.remove('active'));
+            // Remove active class from all topic links
+            topicLinks.forEach(link => link.classList.remove('active'));
             // Add active class to the clicked link
             event.target.classList.add('active');
-            // Update currentCategory and fetch news
-            currentCategory = event.target.getAttribute('data-category');
+            // Update currentTopic and fetch news
+            currentTopic = event.target.getAttribute('data-topic');
             page = 1;
             fetchNews(true);
         });

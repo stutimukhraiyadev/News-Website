@@ -78,15 +78,15 @@ header {
     color: #333;
 }
 
-/* category styles */
-.category-nav {
+/* topic styles */
+.topic-nav {
     background-color: #f4f4f4;
     padding: 10px 0;
     position: relative;
      
 }
 
-.category-nav ul {
+.topic-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -95,18 +95,18 @@ header {
     flex-wrap: wrap;
 }
 
-.category-nav ul li {
+.topic-nav ul li {
     margin: 0 15px;
 }
 
-.category-nav ul li a {
+.topic-nav ul li a {
     color: #333;
     text-decoration: none;
     font-size: 16px;
     padding: 5px 10px;
 }
 
-.category-nav ul li a:hover {
+.topic-nav ul li a:hover {
     background-color: #ddd;
     border-radius: 3px;
 }
@@ -335,7 +335,7 @@ footer {
     color: #007BFF;
 }
 
-.category-nav ul li a.active {
+.topic-nav ul li a.active {
     background-color: #ddd;
     border-radius: 3px;
     color: #000;
