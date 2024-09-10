@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(finalUrl)
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 const newsContainer = document.getElementById('news-container');
                 if (initialLoad) {
                     newsContainer.innerHTML = ''; // Clear previous news articles
